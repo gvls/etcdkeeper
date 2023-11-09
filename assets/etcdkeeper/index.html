@@ -207,7 +207,7 @@
         editor.$blockScrolling = Infinity;
 		var curIconMode = 'mode_icon_text';
 		var aceMode = Cookies.get('ace-mode');
-		if (typeof(aceMode) === 'undefined') {
+		if (typeof(aceMode) === 'undefined') { // Set default content format
 			aceMode = 'text';
 		}
 		var treeMode = Cookies.get('tree-mode');
@@ -369,6 +369,7 @@
 							//if (autoFormat === 'true') {
 								//format(aceMode);
 							//}
+                            format(aceMode);
 							var ttl = 0;
 							if (data.node.ttl) {
 								ttl = data.node.ttl;
