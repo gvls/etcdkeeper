@@ -807,6 +807,9 @@
 			$('#userinfo').window('close');
 			connect();
 		}
+		window.addEventListener('load', (event) => { // Executed after the page is loaded
+			connect();
+		});
 	</script>
 </body>
 </html>
